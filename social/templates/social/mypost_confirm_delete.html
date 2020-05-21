@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<main class="p-5">
+<div class="row p-5">
+		<div class="col">
+			<h1 class="myhead2"></h1>
+			
+		</div>
+</div>
+	<div class ="row justify-content-center">
+		<div class="col-sm-6">
+			<div class="card">
+				<div class="card-body ">
+					<form enctype="multipart/form-data" method="post">
+					{% csrf_token %}
+					{{form | crispy}}
+					<h1 class="myhead2">Are You Sure ?</h1>
+					<input class="btn btn-danger my-3 " type="submit" />
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+{% endblock %}

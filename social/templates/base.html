@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Sabha</title>
+<link href="/static/vender/bs/css/bootstrap.min.css" rel="stylesheet" />
+<script src="/static/vender/jquery-3.3.1.min.js"></script>
+<script src="/static/vender/popper.min.js"></script>
+<script src="/static/vender/bs/js/bootstrap.min.js"></script>
+<link href="/static/vender/fa/css/font-awesome.min.css" rel="stylesheet" />
+<link href="/static/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<header id="myheader1">
+	<div id="headfix">
+		<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+			  	<a class="navbar-brand" href="/social/home">
+    				<img src="/static/images/Logo.png"  width="40" height="40" alt="">
+    					Apple inc..
+    			</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav ml-auto">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="/social/home">Home <span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="/social/about">About</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="/social/contact">Contact</a>
+			      </li>
+			      {% if user.is_authenticated %}
+			      <li class="nav-item">
+			        <a class="nav-link" href="/social/mypost">My Post</a>
+			      </li>
+			       <li class="nav-item">
+			        <a class="nav-link" href="/social/myprofile">Profiles</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="/accounts/logout">Logout</a>
+			      </li>
+			      {% else %}
+			      <li class="nav-item">
+			        <a class="nav-link" href="/accounts/login">Login</a>
+			      </li>
+			      {% endif %}
+			      
+			      {% if user.is_superuser %}
+			      <li class="nav-item">
+			        <a class="nav-link" href="/admin">Admin</a>
+			      </li>
+				{% else %}
+					{% if user.is_authenticated %}
+					<li class="nav-item">
+			        	<a class="nav-link" href="/social/profile/edit/{{ user.myprofile.id }}">Edit Profile</a>
+			      	</li>
+					{% endif %}
+				{% endif %}
+
+			    </ul>
+			  </div>
+		</nav>
+	</div>
+</header>
+
+
+
+
+
+{% block content %}
+{% endblock %}
+<footer class="myfooter text-center p-1">
+<hr>
+<div class="row">
+	<div class="col-sm-6">
+		<h2>Toll Free No</h1>
+		<p>+1 408-606-5775</p>
+	</div>
+	<div class="col-sm-6">
+		<h2>Social Media</h2>
+		<a href="https://www.facebook.com/apple/"><span class="fa fa-facebook-official fa-2x mx-2"></span></a>
+		<a href="https://twitter.com/apple?lang=en"><span class="fa fa-twitter fa-2x mx-2"></span></a>
+		<a href="https://www.youtube.com/user/Apple"><span class="fa fa-youtube fa-2x mx-2"></span></a>
+		<a href="https://www.instagram.com/apple/?hl=en"><span class="fa fa-instagram fa-2x mx-2"></span></a>
+	</div>
+</div>
+<p>Copyright @ Bla</p>
+<p>One Infinite Loop, Cupertino, CA 95014, United States,8XJ9+MW Cupertino, California, United States</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+@charset "ISO-8859-1";
+body{
+	background-color: #c4c4c4;
+	font-size: 1.1em;
+	background-image: url(/static/images/banners1.jpg);
+}
+
+#myheader1{
+	height: 90px;
+	border-bottom: 0.5px solid grey;
+}
+
+#headfix{
+	position: absolute;
+	top: 1px;
+	width: 100%;
+	z-index: 10;
+}
+#headfix h1{
+	font-size: 40px;
+	color: #c4cbfb;
+	text-align: center;
+	text-shadow: 2px 2px 2px black;
+	font-family: cursive; 
+	font-weight: bolder;
+}
+.navbar{
+	font-size: 20px;
+	color: #c4cbfb;
+	text-shadow: 1px 1px 1px white;
+	font-family: cursive; 
+	font-weight: bolder;
+}
+.navbar-light .navbar-nav .nav-link{
+	color: black;
+}
+@media(max-width: 766px){
+	.navbar-nav{
+		background-color: transparent;
+	}
+}
+.myfooter, .myfooter a{
+	font-size: 18px;
+	color: #c4cbfb;
+	text-shadow: 1px 1px 1px white;
+	font-family: cursive; 
+	font-weight: bolder;
+	color: black;
+	background-color: transparent ;
+}
+.myhead2{
+	color: black;
+	text-align: center;
+	text-shadow: 1px 1px 1px white;
+	font-family: cursive; 
+	
+}
+.myfooter .col-sm-6{
+	border-bottom: 1px solid black;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.row .col-sm-6{
+	font-family: cursive; 
+}
+
+.card{
+	background-color: transparent ;
+}
+
+form .alert ul li {
+	list-style: none;
+}
+
+form .alert ul {
+	padding: 0;
+	margin: 0;
+}
+

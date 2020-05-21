@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<main class="p-5">
+
+<div class="row p-5">
+		<div class="col">
+		<h1 class="myhead2">Contact</h1>
+		<hr>
+		</div>
+</div>
+<div class="row">
+		<div class="col-sm-6">
+		<h1> Any Queries </h1>
+		<form>
+		<input class="form-control" type="text" name="username" placeholder="name" /><br>
+		<input class="form-control" type="email" name="email" placeholder="email" /><br>
+		<input class="form-control" type="phoneNumber" name="phone_no" placeholder="phone no" /><br>
+		<textarea class="form-control" placeholder="message"></textarea><br>
+		<button class="btn btn-primary btn-block" type="submit">submit</button>
+		</form>
+		</div>
+		<div class="col-sm-6">
+		<h1> Address Info </h1>
+		<p>
+		<strong><span class="fa fa-map-marker mx-2"></strong>Apple Inc.One Apple Park Way, Cupertino, CA 95014 ,United States<br><br>
+		<strong><span class="fa fa-phone mx-2"></strong>+1 408-606-5775<br><br>
+		<strong><span class="fa fa-fax mx-2"></strong>+91 80 4045 5197<br><br>
+		<strong><span class="fa fa-globe mx-2"></strong>https://www.apple.com/<br><br>
+		
+		</p>
+		</div>
+</div>
+<div class="row my-5">
+<div class="col-sm-8 offset-sm-2">
+<div class="embed-responsive embed-responsive-16by9">
+			<iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.456316667505!2d-122.03250858485204!3d37.33170424529983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5b6e94ffe23%3A0x63bb79532baa6af4!2sApple%20Campus!5e0!3m2!1sen!2sin!4v1588356006880!5m2!1sen!2sin"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>	
+</div>
+</div>
+
+</main>
+
+{% endblock %}
